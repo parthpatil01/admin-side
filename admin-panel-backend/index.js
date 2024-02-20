@@ -17,9 +17,11 @@ app.use(cors());
 
 // Routes
 app.use('/api/products', require('./routes/productRoutes'));
+app.use('/uploads', express.static('uploads'));
+
 
 // Connect to MongoDB
-mongoose.connect('mongodb://127.0.0.1:27017/admin-antique', {
+mongoose.connect('mongodb+srv://edutools123:Fake%40auth@cluster0.noqxrfh.mongodb.net/antique-admin?retryWrites=true&w=majority', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
@@ -27,6 +29,8 @@ mongoose.connect('mongodb://127.0.0.1:27017/admin-antique', {
 mongoose.connection.on('connected', () => {
   console.log('Connected to MongoDB');
 });
+
+
 
 // Start server
 app.listen(PORT, () => {

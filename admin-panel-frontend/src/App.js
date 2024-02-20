@@ -1,13 +1,11 @@
 
 import './App.css';
-import './components/ProductForm.js';
-import ProductForm from './components/ProductForm.js';
+import Home from './components/Home/Home';
 
 function App() {
   return (
-    <div className="App">
-      <h1>Add Product</h1>
-      <ProductForm />
+    <div className="App">   
+      <Home/>
     </div>
   );
 }

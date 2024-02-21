@@ -109,7 +109,7 @@ const ProductInsert = () => {
             </form>
 
             <div className="text-center mt-3">
-              <h5>Add bulk products</h5>
+              <h5 className='mb-3'>Add Products in Bulk</h5>
             </div>
 
             <form onSubmit={handleBulkSubmit}>
